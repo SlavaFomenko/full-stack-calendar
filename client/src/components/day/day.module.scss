@@ -1,0 +1,21 @@
+.day {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #000;
+
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+
+	position: relative;
+
+	.event_counter {
+		position: absolute;
+		top: 3px;
+		right: 3px;
+
+		font-size: 80%;
+		color: #4d4d4d;
+	}
+}
