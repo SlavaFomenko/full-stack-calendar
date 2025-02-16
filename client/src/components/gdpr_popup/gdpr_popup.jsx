@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styles from './gdpr_popup.module.scss';
 
+/**
+ * ${1:GDPRPopup}
+ *
+ * @param {{ onAccept: any; onDecline: any; }} param0
+ * @param {${2:*}} param0.onAccept
+ * @param {${3:*}} param0.onDecline
+ * @returns {${4:*}\}
+ */
 const GDPRPopup = ({ onAccept, onDecline }) => {
     const [visible, setVisible] = useState(false);
     const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);

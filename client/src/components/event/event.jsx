@@ -1,6 +1,15 @@
 import React, { useState } from 'react'
 import styles from './event.module.scss'
 
+/**
+ * ${1:Event}
+ *
+ * @param {{ data: any; setDisableButton: any; handleDeleteEvent: any; }} param0
+ * @param {${2:*}} param0.data
+ * @param {${3:*}} param0.setDisableButton
+ * @param {${4:*}} param0.handleDeleteEvent
+ * @returns {${5:*}\}
+ */
 const Event = ({ data, setDisableButton, handleDeleteEvent }) => {
 	const [isEditing, setIsEditing] = useState(data.isEdit);
 	const [eventName, setName] = useState(data.name);

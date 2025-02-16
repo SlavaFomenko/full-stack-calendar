@@ -13,8 +13,20 @@ import ChangeMonth from './components/buttons/ChangeMonth'
 import Day from './components/day/day'
 import { useSelector } from 'react-redux'
 
+/**
+ * ${1:DAYS_OF_WEEK}
+ *
+ * @type {{}\}
+ */
 const DAYS_OF_WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
+/**
+ * ${1:Calendar}
+ *
+ * @param {{ visible: any; }} param0
+ * @param {${2:*}} param0.visible
+ * @returns {${3:*}\}
+ */
 const Calendar = ({visible}) => {
 	const [date, setData] = useState(new Date())
 

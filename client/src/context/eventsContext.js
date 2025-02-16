@@ -1,7 +1,19 @@
 import React, { createContext, useEffect, useState } from 'react'
 
+/**
+ * ${1:EventsContext}
+ *
+ * @type {${2:*}}
+ */
 const EventsContext = createContext({})
 
+/**
+ * ${1:EventsContextProvider}
+ *
+ * @param {{ children: any; }} param0
+ * @param {${2:*}} param0.children
+ * @returns {${3:*}\}
+ */
 const EventsContextProvider = ({ children }) => {
 	const [events, setEvents] = useState(() => {
 		const storedEvents = localStorage.getItem('events')

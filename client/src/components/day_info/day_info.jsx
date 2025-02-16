@@ -7,6 +7,11 @@ import Event from '../event/event'
 import { deleteDate } from '../../actions'
 import styles from './day_info.module.scss'
 
+/**
+ * ${1:DayInfo}
+ *
+ * @returns {${2:*}}
+ */
 const DayInfo = () => {
 	const date = useSelector(state => state.date.day)
 	const [disableButton, setDisableButton] = useState(false)

@@ -1,6 +1,33 @@
+/**
+ * ${1:Description placeholder}
+ *
+ * @export
+ * @interface Event
+ * @typedef {Event}
+ */
 export interface Event {
-    id: string;
-    name: string;
-    event: string;
-    date: string;
+    /**
+ * ${1:Description placeholder}
+ *
+ * @type {string}
+ */
+id: string;
+    /**
+ * ${1:Description placeholder}
+ *
+ * @type {string}
+ */
+name: string;
+    /**
+ * ${1:Description placeholder}
+ *
+ * @type {string}
+ */
+event: string;
+    /**
+ * ${1:Description placeholder}
+ *
+ * @type {string}
+ */
+date: string;
 }

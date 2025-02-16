@@ -5,6 +5,14 @@ import { setDate } from '../../actions'
 import { EventsContext } from '../../context/eventsContext'
 import styles from './day.module.scss'
 
+/**
+ * ${1:Day}
+ *
+ * @param {{ info: any; disable: any; }} param0
+ * @param {${2:*}} param0.info
+ * @param {${3:*}} param0.disable
+ * @returns {${4:*}\}
+ */
 const Day = ({ info, disable }) => {
 	const { value, date } = info
 	const dateSelector = useSelector(state => state.date)

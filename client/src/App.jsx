@@ -5,6 +5,11 @@ import Calendar from './calendar';
 import DayInfo from './components/day_info/day_info';
 import GDPRPopup from './components/gdpr_popup/gdpr_popup';
 
+/**
+ * ${1:App}
+ *
+ * @returns {${2:*}}
+ */
 function App() {
 	const day = useSelector(state => state.date.day);
 	const [gdprAccepted, setGdprAccepted] = useState(null);

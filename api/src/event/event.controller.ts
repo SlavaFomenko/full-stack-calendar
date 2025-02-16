@@ -3,13 +3,31 @@ import { EventsService } from './event.service';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Event } from './event.interface';
 
+/**
+ * ${1:Description placeholder}
+ *
+ * @export
+ * @class EventsController
+ * @typedef {EventsController}
+ */
 @Controller('api/events')
 @ApiTags('Events')
 export class EventsController {
-    constructor(private readonly eventsService: EventsService) {}
+    /**
+ * Creates an instance of EventsController.
+ *
+ * @constructor
+ * @param {EventsService} eventsService
+ */
+constructor(private readonly eventsService: EventsService) {}
 
     // Получить все события
-    @Get()
+    /**
+ * ${1:Description placeholder}
+ *
+ * @returns {Event[]}
+ */
+@Get()
     @ApiOperation({ summary: 'Get all events' })
     @ApiResponse({ status: 200, description: 'List of events', type: [Event] })
     getEvents(): Event[] {
@@ -17,7 +35,13 @@ export class EventsController {
     }
 
     // Получить события для конкретной даты
-    @Get('date')
+    /**
+ * ${1:Description placeholder}
+ *
+ * @param {string} date
+ * @returns {Event[]}
+ */
+@Get('date')
     @ApiOperation({ summary: 'Get events for a specific date' })
     @ApiResponse({
         status: 200,
@@ -29,7 +53,13 @@ export class EventsController {
     }
 
     // Создать новое событие
-    @Post()
+    /**
+ * ${1:Description placeholder}
+ *
+ * @param {Event} event
+ * @returns {string}
+ */
+@Post()
     @ApiOperation({ summary: 'Create a new event' })
     @ApiResponse({ status: 201, description: 'The event has been created' })
     createEvent(@Body() event: Event): string {
@@ -37,7 +67,14 @@ export class EventsController {
     }
 
     // Обновить существующее событие
-    @Put(':id')
+    /**
+ * ${1:Description placeholder}
+ *
+ * @param {string} id
+ * @param {Event} updatedEvent
+ * @returns {string}
+ */
+@Put(':id')
     @ApiOperation({ summary: 'Update an existing event' })
     @ApiResponse({ status: 200, description: 'The event has been updated' })
     updateEvent(@Param('id') id: string, @Body() updatedEvent: Event): string {
@@ -45,7 +82,13 @@ export class EventsController {
     }
 
     // Удалить событие
-    @Delete(':id')
+    /**
+ * ${1:Description placeholder}
+ *
+ * @param {string} id
+ * @returns {string}
+ */
+@Delete(':id')
     @ApiOperation({ summary: 'Delete an event' })
     @ApiResponse({ status: 200, description: 'The event has been deleted' })
     deleteEvent(@Param('id') id: string): string {
