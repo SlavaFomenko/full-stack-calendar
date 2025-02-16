@@ -15,7 +15,7 @@ import { useSelector } from 'react-redux'
 
 const DAYS_OF_WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-const Calendar = () => {
+const Calendar = ({visible}) => {
 	const [date, setData] = useState(new Date())
 
 	const dayStore = useSelector(state => state.date.day)
@@ -80,7 +80,7 @@ const Calendar = () => {
 	return (
 		<section
 			className={classNames(styles.wrapper, {
-				[styles.visible]: dayStore,
+				[styles.visible]: dayStore && visible,
 			})}
 		>
 			<header>
